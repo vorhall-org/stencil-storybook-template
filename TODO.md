@@ -1,0 +1,14 @@
+- prettier? if not, remove config file
+- eslint / tslint
+- stylelint
+- cleanup package.json (remove deps, check all entries etc.)
+- husky & commitlint
+- postcss?
+- remove default stories folder
+- remove chromatic dep
+- explore ways to write stories
+- import component types and use it in args (as type) on stories?
+- add helper to generate a new component
+
+- testing: https://blog.enable.engineering/building-a-trusted-design-system-with-storybook-d8f8c8741901
+- component testing: https://storybook.js.org/blog/component-testing/
