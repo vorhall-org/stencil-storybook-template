@@ -15,4 +15,4 @@ export default {
 const template = (): any => '<my-component first="Stencil" last="\'Don\'t call me a framework\' JS"></my-component>';
 
 export const example = template.bind({});
-Example.args = {};
+example.args = {};
