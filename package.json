@@ -44,7 +44,8 @@
     "lint:es": "eslint .",
     "lint:styles": "stylelint '**/*.scss'",
     "lint": "npm run lint:es && npm run lint:styles",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
