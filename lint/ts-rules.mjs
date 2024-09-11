@@ -1,17 +1,8 @@
 export default {
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/array-type': 'error',
-  // '@typescript-eslint/ban-types': 'error',
   '@typescript-eslint/explicit-function-return-type': 'warn',
   '@typescript-eslint/explicit-member-accessibility': 'error',
-  // '@typescript-eslint/indent': [
-  //   'error',
-  //   2,
-  //   {
-  //     SwitchCase: 1,
-  //   },
-  // ],
-  // '@typescript-eslint/member-delimiter-style': 'error',
   '@typescript-eslint/naming-convention': [
     'error',
     {
@@ -56,7 +47,6 @@ export default {
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-non-null-assertion': 'error',
-  '@typescript-eslint/parameter-properties': 'error',
   '@typescript-eslint/no-unused-vars': [
     'error',
     {
@@ -66,9 +56,8 @@ export default {
   ],
   '@typescript-eslint/no-use-before-define': 'error',
   '@typescript-eslint/no-var-requires': 'off',
+  '@typescript-eslint/parameter-properties': 'error',
   '@typescript-eslint/prefer-namespace-keyword': 'error',
-  // '@typescript-eslint/semi': ['error'],
-  // '@typescript-eslint/type-annotation-spacing': 'error',
   'camelcase': 'off',
   'indent': [
     'error',

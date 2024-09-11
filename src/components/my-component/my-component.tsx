@@ -1,32 +1,38 @@
-import { Component, Prop, h } from '@stencil/core';
+import {
+  Component,
+  h,
+  Prop,
+} from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.scss',
   shadow: true,
+  styleUrl: 'my-component.scss',
+  tag: 'my-component',
 })
 export class MyComponent {
+
   /**
    * The first name
    */
-  @Prop() first: string;
+  @Prop() public first;
 
   /**
    * The middle name
    */
-  @Prop() middle: string;
+  @Prop() public middle: string;
 
   /**
    * The last name
    */
-  @Prop() last: string;
+  @Prop() public last: string;
 
-  private getText(): string {
+  private _getText(): string {
+    // const foo: Array = [];
     return format(this.first, this.middle, this.last);
   }
 
-  render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+  public render(): HTMLDivElement {
+    return <div>Hello, World! I'm {this._getText()}</div>;
   }
 }

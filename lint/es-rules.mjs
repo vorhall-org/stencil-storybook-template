@@ -1,9 +1,9 @@
+/* eslint-disable sort-keys */
 export default {
 
   /**
    * Possible errors
    */
-  'no-mixed-spaces-and-tabs': 'error',
   'for-direction': 'error',
   'getter-return': 'error',
   'no-async-promise-executor': 'error',
@@ -28,6 +28,7 @@ export default {
   'no-invalid-regexp': 'error',
   'no-irregular-whitespace': 'error',
   'no-misleading-character-class': 'error',
+  'no-mixed-spaces-and-tabs': 'error',
   'no-obj-calls': 'error',
   'no-prototype-builtins': 'error',
   'no-regex-spaces': 'error',
@@ -440,3 +441,4 @@ export default {
   'template-curly-spacing': 'error',
   'yield-star-spacing': 'error',
 };
+/* eslint-enable sort-keys */
