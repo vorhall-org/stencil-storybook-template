@@ -1,6 +1,6 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
-import { projectConfig } from './project-config';
+import projectConfig from './project-config';
 import eventSync from './stencil-build-helpers/rollup/event-sync';
 
 export const config: Config = {
