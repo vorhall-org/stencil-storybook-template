@@ -1,17 +1,17 @@
 {
-  "name": "postauto",
+  "name": "vorhall",
   "version": "0.0.1",
-  "description": "Components for Postauto Timetable",
+  "description": "Vorhall stencil&storybook template",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/postauto/postauto.esm.js",
+  "unpkg": "dist/vorhall/vorhall.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/postauto/postauto.esm.js",
-      "require": "./dist/postauto/postauto.cjs.js"
+      "import": "./dist/vorhall/vorhall.esm.js",
+      "require": "./dist/vorhall/vorhall.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",
