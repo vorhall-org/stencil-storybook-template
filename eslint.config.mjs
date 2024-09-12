@@ -30,7 +30,6 @@ export default tseslint.config(
           jsx: true,
         },
         ecmaVersion: 6,
-        projectService: true,
         sourceType: 'module',
         tsconfigRootDir: import.meta.dirname,
       },
