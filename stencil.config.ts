@@ -23,7 +23,16 @@ export const config: Config = {
       type: 'www',
     },
   ],
-  plugins: [sass()],
+  plugins: [
+    sass({
+      injectGlobalPaths: [
+        'src/styles/variables.scss',
+        'src/styles/functions.scss',
+        'src/styles/mediaqueries.scss',
+        'src/styles/utilities.scss',
+      ],
+    }),
+  ],
   rollupPlugins: {
     before: [eventSync('components')],
   },
