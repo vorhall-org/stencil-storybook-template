@@ -44,7 +44,7 @@ export class MyComponent {
 
   public render(): HTMLDivElement {
     return (
-      <div>
+      <div class='foo'>
         <p>Hello, World! I'm {this._getText()}</p>
         <button onClick={() => {
           this.clicked.emit();

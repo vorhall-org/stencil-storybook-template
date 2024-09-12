@@ -1,7 +1,10 @@
-$color: green;
+@include host-component-properties;
 
-:host {
-  display: block;
-  color: $color;
-  opacity: 0.6;
+.foo {
+  color: green;
+
+  @include mq($from: medium) {
+    color: $color-black;
+    font-size: px-to-rem(32);
+  }
 }
