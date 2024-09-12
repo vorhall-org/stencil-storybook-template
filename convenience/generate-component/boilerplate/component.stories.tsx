@@ -22,8 +22,7 @@ export default {
   decorators: [withActions as Decorator],
   parameters: {
     actions: {
-      // events.clicked
-      handles: [],
+      // handles: [events.clicked],
     },
     docs: {
       extractComponentDescription: (): any => readme,
