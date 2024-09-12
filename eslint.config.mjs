@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import jestPlugin from 'eslint-plugin-jest';
+import globals from 'globals';
 import customTsRules from './lint/ts-rules.mjs';
 import customEsRules from './lint/es-rules.mjs';
 
@@ -18,9 +19,10 @@ export default tseslint.config(
     extends: [eslint.configs.recommended],
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
+        ...globals.browser,
+        ...globals.node,
+        ...globals.jsx,
+        h: 'readonly',
       },
     },
     rules: customEsRules,
@@ -32,6 +34,9 @@ export default tseslint.config(
     ],
     files: ['**/*.ts?(x)'],
     languageOptions: {
+      globals: {
+        __dirname: 'readonly',
+      },
       parser: tseslint.parser,
       parserOptions: {
         ecmaFeatures: {
@@ -43,6 +48,7 @@ export default tseslint.config(
       },
     },
     rules: {
+      ...customEsRules,
       ...customTsRules,
     },
   },
