@@ -30,7 +30,7 @@ import {
   writeFileSync,
 } from 'fs';
 import * as ts from 'typescript';
-import { projectConfig } from '../../project-config';
+import projectConfig from '../../project-config';
 
 const config = {
   componentsPrefix: projectConfig.componentPrefix,
