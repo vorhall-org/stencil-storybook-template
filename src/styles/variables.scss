@@ -1,0 +1,24 @@
+// font-size
+$components-base-font-size: 16;
+
+// font family
+$font-family-default: sens-serif;
+$font-family-bold: sens-serif;
+$font-family-hand: sens-serif;
+
+// breakpoints
+$breakpoint-zero: 0;
+$breakpoint-micro: 360;
+$breakpoint-small: 600;
+$breakpoint-medium: 840;
+$breakpoint-large: 1024;
+$breakpoint-wide: 1280;
+$breakpoint-ultra: 1440;
+
+// colors
+$color-black: #000;
+$color-white: #FFF;
+
+// transitions
+$transition-duration-default: 200ms;
+$transition-timing-function-default: cubic-bezier(0.785, 0.135, 0.15, 0.86);
