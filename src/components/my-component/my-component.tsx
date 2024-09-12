@@ -1,5 +1,7 @@
 import {
   Component,
+  Event,
+  EventEmitter,
   h,
   Prop,
 } from '@stencil/core';
@@ -27,12 +29,27 @@ export class MyComponent {
    */
   @Prop() public last: string;
 
+  /** This event is dispatched when the button is clicked */
+  @Event({
+    bubbles: true,
+    composed: true,
+    eventName: 'my-component_button-clicked',
+  })
+  public clicked: EventEmitter<string>;
+
   private _getText(): string {
     // const foo: Array = [];
     return format(this.first, this.middle, this.last);
   }
 
   public render(): HTMLDivElement {
-    return <div>Hello, World! I'm {this._getText()}</div>;
+    return (
+      <div>
+        <p>Hello, World! I'm {this._getText()}</p>
+        <button onClick={() => {
+          this.clicked.emit();
+        }}>Foo</button>
+      </div>
+    );
   }
 }
