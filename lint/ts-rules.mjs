@@ -50,8 +50,7 @@ export default {
   '@typescript-eslint/no-unused-vars': [
     'error',
     {
-      vars: 'all',
-      varsIgnorePattern: 'h',
+      varsIgnorePattern: '^h$',
     },
   ],
   '@typescript-eslint/no-use-before-define': 'error',

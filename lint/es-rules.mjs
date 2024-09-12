@@ -140,7 +140,12 @@ export default {
   'no-undef': 'error',
   'no-undef-init': 'error',
   'no-undefined': 'off',
-  'no-unused-vars': 'error',
+  'no-unused-vars': [
+    'error',
+    {
+      varsIgnorePattern: '^h$',
+    },
+  ],
   'no-use-before-define': 'error',
 
   /**
