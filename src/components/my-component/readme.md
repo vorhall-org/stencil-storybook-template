@@ -14,6 +14,13 @@
 | `middle` | `middle`  | The middle name | `string` | `undefined` |
 
 
+## Events
+
+| Event                         | Description                                         | Type                  |
+| ----------------------------- | --------------------------------------------------- | --------------------- |
+| `my-component_button-clicked` | This event is dispatched when the button is clicked | `CustomEvent<string>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
