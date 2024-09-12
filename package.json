@@ -40,12 +40,12 @@
     "storybook:prod": "storybook build",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "node convenience/generate-component/index.js",
     "lint:es": "eslint",
     "lint:styles": "stylelint '**/*.scss'",
     "lint": "npm run lint:es && npm run lint:styles",
-    "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "generate": "node convenience/generate-component/index.js",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
