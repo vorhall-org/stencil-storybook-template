@@ -1,4 +1,12 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "scss/dollar-variable-pattern": null
+  },
+  "ignoreFiles": [
+    "convenience/generate-component/boilerplate/styles/*.scss"
+  ]
 }
 
