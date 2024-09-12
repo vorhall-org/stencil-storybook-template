@@ -3,5 +3,5 @@
   "*.tsx": "npm run lint:es",
   "*.mjs": "npm run lint:es",
   "*.js": "npm run lint:es",
-  "*.scss": "npm run lint:styles",
+  "*.scss": "stylelint"
 }
