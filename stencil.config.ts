@@ -1,8 +1,10 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { projectConfig } from './project-config';
+import eventSync from './stencil-build-helpers/rollup/event-sync';
 
 export const config: Config = {
-  namespace: 'postauto',
+  namespace: projectConfig.namespace,
   outputTargets: [
     {
       esmLoaderPath: '../loader',
@@ -22,6 +24,9 @@ export const config: Config = {
     },
   ],
   plugins: [sass()],
+  rollupPlugins: {
+    before: [eventSync('components')],
+  },
   testing: {
     browserHeadless: 'new',
   },
