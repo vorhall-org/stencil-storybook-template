@@ -3,10 +3,6 @@
 - remove chromatic dep
 - explore ways to write stories
 - import component types and use it in args (as type) on stories?
-- add helper to generate a new component
-- how to handle events in stencil components? add event-sync script?
-- linter: if EventEmitter-Type is unused in component, Typescript complains in console, but linter does not higlight in IDE
-- linter: variable defined as "const Foo" is used as "foo" -> linter does not highlight in IDE
 - condense/correct tests
 - finalize documentation
 
