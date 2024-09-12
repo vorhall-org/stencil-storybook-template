@@ -11,10 +11,18 @@ export default tseslint.config(
       '**/www/**',
       '**/loader/**',
       '**/.stencil/**',
+      '**/boilerplate/**',
     ],
   },
   {
     extends: [eslint.configs.recommended],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+      },
+    },
     rules: customEsRules,
   },
   {
