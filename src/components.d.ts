@@ -5,76 +5,68 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { InterfaceMyButton } from "./components/my-button/my-button.custom.d";
+export { InterfaceMyButton } from "./components/my-button/my-button.custom.d";
 export namespace Components {
-    interface MyComponent {
+    interface MyButton {
         /**
-          * The first name
+          * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
          */
-        "first": any;
+        "firstName": string;
         /**
-          * The last name
+          * Create a meaningful description for the method. This will be automatically rendered to the documentation.
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "sampleMethod": () => Promise<void>;
+        "variant"?: InterfaceMyButton['variant'];
     }
 }
-export interface MyComponentCustomEvent<T> extends CustomEvent<T> {
+export interface MyButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLMyComponentElement;
+    target: HTMLMyButtonElement;
 }
 declare global {
-    interface HTMLMyComponentElementEventMap {
-        "my-component_button-clicked": string;
+    interface HTMLMyButtonElementEventMap {
+        "my-button_button-clicked": void;
     }
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLMyComponentElementEventMap>(type: K, listener: (this: HTMLMyComponentElement, ev: MyComponentCustomEvent<HTMLMyComponentElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMyButtonElementEventMap>(type: K, listener: (this: HTMLMyButtonElement, ev: MyButtonCustomEvent<HTMLMyButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLMyComponentElementEventMap>(type: K, listener: (this: HTMLMyComponentElement, ev: MyComponentCustomEvent<HTMLMyComponentElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMyButtonElementEventMap>(type: K, listener: (this: HTMLMyButtonElement, ev: MyButtonCustomEvent<HTMLMyButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface MyButton {
         /**
-          * The first name
+          * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
          */
-        "first"?: any;
+        "firstName": string;
         /**
-          * The last name
+          * Create a meaningful description for the event. This will be automatically rendered to the documentation.
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-        /**
-          * This event is dispatched when the button is clicked
-         */
-        "onMy-component_button-clicked"?: (event: MyComponentCustomEvent<string>) => void;
+        "onMy-button_button-clicked"?: (event: MyButtonCustomEvent<void>) => void;
+        "variant"?: InterfaceMyButton['variant'];
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "my-button": MyButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }
 }
