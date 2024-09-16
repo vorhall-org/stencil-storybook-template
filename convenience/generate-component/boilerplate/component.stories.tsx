@@ -8,13 +8,12 @@ import type {
   StoryObj,
 } from '@storybook/web-components';
 import { JSX as customJSX } from '../../components';
-import { __nameUpperCase__ } from './__name__';
 
 /* ------------------------------------------------------ */
 /* Storytype */
 /* ------------------------------------------------------ */
 
-type Story = StoryObj<__nameUpperCase__> & { args: customJSX.__nameUpperCase__ };
+type Story = StoryObj<customJSX.__nameUpperCase__> & { args: customJSX.__nameUpperCase__ };
 
 /* ------------------------------------------------------ */
 /* ArgTypes & Args */
