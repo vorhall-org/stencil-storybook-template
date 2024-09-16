@@ -11,19 +11,13 @@ describe('__name__', () => {
       .toHaveClass('hydrated');
   });
 
-  it('renders changes to the name data', async () => {
+  it('renders param value', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<__name__></__name__>');
-    const component = await page.find('__name__');
-    const element = await page.find('__name__ >>> div p.greeting');
+    await page.setContent('<__name__ foo="bar"></__name__>');
+    const element = await page.find('__name__ >>> div');
 
     expect(element.textContent)
-      .toEqual('Hello, World! I\'m ');
-
-    component.setProperty('firstName', 'James');
-    await page.waitForChanges();
-    expect(element.textContent)
-      .toEqual('Hello, World! I\'m James');
+      .toEqual('Component with param bar');
   });
 });

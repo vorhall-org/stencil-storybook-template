@@ -1,47 +1,55 @@
 // @ts-expect-error: File could not be found
 import readme from './readme.md?raw';
 import { withActions } from '@storybook/addon-actions/decorator';
-import type { Decorator } from '@storybook/web-components';
-// import events from './__name__.events';
+import type {
+  ArgTypes,
+  Decorator,
+  Meta,
+  StoryObj,
+} from '@storybook/web-components';
+import { JSX as customJSX } from '../../components';
+import { __nameUpperCase__ } from './__name__';
 
-const argTypes = {
-  variant: {
-    control: {
-      type: 'select',
-    },
-    options: [
-      'primary',
-      'secondary',
-    ],
-  },
+/* ------------------------------------------------------ */
+/* Storytype */
+/* ------------------------------------------------------ */
+
+type Story = StoryObj<__nameUpperCase__> & { args: customJSX.__nameUpperCase__ };
+
+/* ------------------------------------------------------ */
+/* ArgTypes & Args */
+/* ------------------------------------------------------ */
+
+const argTypes: ArgTypes = {};
+const defaultArgs: customJSX.__nameUpperCase__ = {
+  foo: 'bar',
 };
 
-export default {
+/* ------------------------------------------------------ */
+/* Meta */
+/* ------------------------------------------------------ */
+
+const meta: Meta = {
   argTypes,
+  args: defaultArgs,
   component: '__name__',
   decorators: [withActions as Decorator],
   parameters: {
-    actions: {
-      // handles: [events.clicked],
-    },
+    actions: {},
     docs: {
       extractComponentDescription: (): any => readme,
     },
   },
   tags: ['autodocs'],
-  title: 'Components/__nameUpperCase__',
+  title: '__nameUpperCase__',
 };
 
-export const primary = {
-  args: {
-    label: 'button',
-    variant: 'primary',
-  },
-};
+export default meta;
 
-export const secondary = {
-  args: {
-    ...primary.args,
-    variant: 'secondary',
-  },
+/* ------------------------------------------------------ */
+/* Stories */
+/* ------------------------------------------------------ */
+
+export const primary: Story = {
+  args: defaultArgs,
 };
