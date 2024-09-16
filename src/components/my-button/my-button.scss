@@ -1,0 +1,15 @@
+@include host-component-properties;
+
+.name {
+  font-weight: bold;
+}
+
+.button {
+  &.primary {
+    color: green;
+  }
+
+  &.secondary {
+    color: red;
+  }
+}
