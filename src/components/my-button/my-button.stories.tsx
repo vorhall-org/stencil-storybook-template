@@ -10,28 +10,18 @@ import type {
 import events from './my-button.events';
 import { JSX as customJSX } from '../../components';
 import { JSX as stencilJSX } from '@stencil/core';
-import { MyButton } from './my-button';
 
 /* ------------------------------------------------------ */
 /* Storytype */
 /* ------------------------------------------------------ */
 
-type Story = StoryObj<MyButton> & { args: customJSX.MyButton };
+type Story = StoryObj<customJSX.MyButton> & { args: customJSX.MyButton };
 
 /* ------------------------------------------------------ */
 /* ArgTypes & Args */
 /* ------------------------------------------------------ */
 
 const argTypes: ArgTypes = {
-  foo: {
-    control: {
-      type: 'select',
-    },
-    options: [
-      'primary',
-      'secondary',
-    ],
-  },
   variant: {
     control: {
       type: 'select',
@@ -52,7 +42,7 @@ const defaultArgs: customJSX.MyButton = {
 /* Meta */
 /* ------------------------------------------------------ */
 
-const meta: Meta = {
+const meta: Meta<customJSX.MyButton> = {
   argTypes,
   args: defaultArgs,
   component: 'my-button',
