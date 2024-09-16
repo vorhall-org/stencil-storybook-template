@@ -66,7 +66,7 @@ const meta: Meta = {
     },
   },
   tags: ['autodocs'],
-  title: 'Components/MyButton',
+  title: 'MyButton',
 };
 
 export default meta;

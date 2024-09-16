@@ -7,42 +7,16 @@ describe('my-button', () => {
       root,
     } = await newSpecPage({
       components: [MyButton],
-      html: '<my-button></my-button>',
+      html: '<my-button first-name="foo"></my-button>',
     });
 
     expect(root)
       .toEqualHtml(`
-        <my-button>
+        <my-button first-name="foo">
           <mock:shadow-root>
             <div class="wrapper">
-              <p class="greeting">Hello, World! I'm <span class="name"></span></p>
-              <button class="primary">Button</button>
-            </div>
-          </mock:shadow-root>
-        </my-button>
-      `);
-  });
-
-  it('renders with values', async () => {
-    const {
-      root,
-    } = await newSpecPage({
-      components: [MyButton],
-      html: '<my-button first-name="John"></my-button>',
-    });
-
-    expect(root)
-      .toEqualHtml(`
-        <my-button first-name="John">
-          <mock:shadow-root>
-            <div class="wrapper">
-              <p class="greeting">
-                Hello, World! I'm
-                <span class="name">
-                  John
-                </span>
-              </p>
-              <button class="primary">Button</button>
+              <p class="greeting">Hello, World! I'm <span class="name">foo</span></p>
+              <button class="button primary">Button</button>
             </div>
           </mock:shadow-root>
         </my-button>

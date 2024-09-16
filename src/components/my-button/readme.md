@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property                 | Attribute    | Description                                                                                                              | Type                       | Default             |
-| ------------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------ | -------------------------- | ------------------- |
-| `firstName` _(required)_ | `first-name` | Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation. | `string`                   | `'the other world'` |
-| `variant`                | `variant`    |                                                                                                                          | `"primary" \| "secondary"` | `'primary'`         |
+| Property                 | Attribute    | Description                                                                                                              | Type                       | Default     |
+| ------------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------ | -------------------------- | ----------- |
+| `firstName` _(required)_ | `first-name` | Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation. | `string`                   | `undefined` |
+| `variant`                | `variant`    |                                                                                                                          | `"primary" \| "secondary"` | `'primary'` |
 
 
 ## Events
