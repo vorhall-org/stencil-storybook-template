@@ -3,9 +3,6 @@
 ## General
 - cleanup package.json (remove deps, check all entries etc.)
 - remove chromatic dep
-- condense/correct tests on example component and in boilerplate
-- finalize documentation
-- clean-up boilerplate
 - keys of the arg-types object should be typed
 
 ## Test setup
