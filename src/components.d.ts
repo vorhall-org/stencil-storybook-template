@@ -8,6 +8,12 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { InterfaceMyButton } from "./components/my-button/my-button.custom.d";
 export { InterfaceMyButton } from "./components/my-button/my-button.custom.d";
 export namespace Components {
+    interface MyBoilerplate {
+        /**
+          * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
+         */
+        "foo": string;
+    }
     interface MyButton {
         /**
           * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
@@ -25,6 +31,12 @@ export interface MyButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLMyButtonElement;
 }
 declare global {
+    interface HTMLMyBoilerplateElement extends Components.MyBoilerplate, HTMLStencilElement {
+    }
+    var HTMLMyBoilerplateElement: {
+        prototype: HTMLMyBoilerplateElement;
+        new (): HTMLMyBoilerplateElement;
+    };
     interface HTMLMyButtonElementEventMap {
         "my-button_button-clicked": void;
     }
@@ -43,10 +55,17 @@ declare global {
         new (): HTMLMyButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "my-boilerplate": HTMLMyBoilerplateElement;
         "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
+    interface MyBoilerplate {
+        /**
+          * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
+         */
+        "foo": string;
+    }
     interface MyButton {
         /**
           * Create a meaningful description for the properties/attributes. This will be automatically rendered to the documentation.
@@ -59,6 +78,7 @@ declare namespace LocalJSX {
         "variant"?: InterfaceMyButton['variant'];
     }
     interface IntrinsicElements {
+        "my-boilerplate": MyBoilerplate;
         "my-button": MyButton;
     }
 }
@@ -66,6 +86,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "my-boilerplate": LocalJSX.MyBoilerplate & JSXBase.HTMLAttributes<HTMLMyBoilerplateElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }
