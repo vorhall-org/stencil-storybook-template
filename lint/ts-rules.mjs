@@ -39,6 +39,13 @@ export default {
       format: ['PascalCase'],
       selector: 'typeLike',
     },
+    {
+      format: [
+        'camelCase',
+        'PascalCase',
+      ],
+      selector: 'import',
+    },
   ],
   '@typescript-eslint/no-array-constructor': 'error',
   '@typescript-eslint/no-empty-interface': 'error',
