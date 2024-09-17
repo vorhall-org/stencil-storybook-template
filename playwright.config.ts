@@ -17,8 +17,35 @@ export default createConfig({
       use: devices['Desktop Chrome'],
     },
     {
+      name: 'Microsoft Edge',
+      use: {
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+      },
+    },
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: {
+          height: 480,
+          width: 800,
+        },
+      },
+    },
+    {
       name: 'firefox',
       use: devices['Desktop Firefox'],
+    },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: {
+          height: 480,
+          width: 800,
+        },
+      },
     },
     {
       name: 'Mobile Chrome',
