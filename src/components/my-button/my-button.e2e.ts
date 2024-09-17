@@ -1,5 +1,7 @@
 import { expect } from '@playwright/test';
 import { test } from '@stencil/playwright';
+import a11y from '../../utils/test/a11y-test';
+import events from './my-button.events';
 
 test.beforeEach(async ({
   page,
@@ -23,7 +25,7 @@ test.describe('my-button', () => {
   }) => {
     const component = await page.locator('my-button');
     const spy = await page
-      .spyOnEvent('my-button_button-clicked');
+      .spyOnEvent(events.clicked);
 
     await component.getByTestId('button')
       .click();
@@ -31,4 +33,6 @@ test.describe('my-button', () => {
     await expect(spy)
       .toHaveReceivedEvent();
   });
+
+  a11y('my-button');
 });
