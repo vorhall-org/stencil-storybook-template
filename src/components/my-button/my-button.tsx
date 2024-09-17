@@ -61,11 +61,15 @@ export class MyButton {
   public render(): HTMLDivElement {
     return (
       <div class='wrapper'>
-        <p class='greeting'>Hello, World! I'm <span class='name'>{this.firstName}</span></p>
+        <p
+          class='greeting'
+          data-testid='greeting'
+        >Hello, World! I'm <span class='name'>{this.firstName}</span></p>
 
         <button
           onClick={this._buttonClick}
           class={`button ${this.variant}`}
+          data-testid='button'
         >Button</button>
       </div>
     );
