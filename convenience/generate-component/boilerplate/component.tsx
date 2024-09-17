@@ -21,7 +21,7 @@ export class __nameUpperCase__ {
   public render(): HTMLDivElement {
     return (
       <div>
-        Component with param {this.foo}
+        <span data-testid='greeting'>Component with param {this.foo}</span>
       </div>
     );
   }
