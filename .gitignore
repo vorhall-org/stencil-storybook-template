@@ -2,6 +2,7 @@ dist/
 hydrate/
 www/
 loader/
+test-results/
 
 *~
 *.sw[mnpcod]
