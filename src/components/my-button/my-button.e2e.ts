@@ -1,13 +1,15 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { expect } from '@playwright/test';
+import { test } from '@stencil/playwright';
 
-describe('my-button', () => {
-  it('renders', async () => {
-    const page = await newE2EPage();
+test.describe('my-button', () => {
+  test('should render the correct name', async ({
+    page,
+  }) => {
+    await page.setContent('<my-button first-name="bar"></my-button>');
 
-    await page.setContent('<my-button></my-button>');
-    const element = await page.find('my-button');
+    const component = await page.locator('my-button');
 
-    expect(element)
-      .toHaveClass('hydrated');
+    await expect(component)
+      .toHaveText('Hello, World! I\'m barButton');
   });
 });
