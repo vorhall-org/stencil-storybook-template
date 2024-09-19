@@ -27,15 +27,3 @@ jobs:
       run: npm run lint
     - name: Test
       run: npm test
-
-
- - name: Set up node using nvm
-  # You may pin to the exact commit or the version.
-  # uses: dcodeIO/setup-node-nvm@b6d6ed786666dee7d42186617cbb1394070de579
-  uses: dcodeIO/setup-node-nvm@v5
-  with:
-    # The node.js version to use according to nvm. Uses the version specified in .nvmrc if omitted.
-    node-version: # optional, default is 
-    # The node.js mirror to use
-    node-mirror: # optional, default is https://nodejs.org/dist/
-          
