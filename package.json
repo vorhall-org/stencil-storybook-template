@@ -54,7 +54,7 @@
     "@eslint/js": "^9.10.0",
     "@playwright/test": "^1.47.1",
     "@stencil/core": "^4.7.0",
-    "@stencil/playwright": "^0.2.0",
+    "@stencil/playwright": "^0.2.1",
     "@stencil/react-output-target": "^0.7.1",
     "@stencil/sass": "^3.0.12",
     "@storybook/addon-essentials": "^8.2.9",
