@@ -1,7 +1,6 @@
 # Todo
 
 ## General
-- cleanup package.json (remove deps, check all entries etc.)
 - keys of the arg-types object should be typed
 
 ## Test setup
