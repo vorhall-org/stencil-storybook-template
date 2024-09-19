@@ -21,9 +21,12 @@ jobs:
     - name: Set the correct Node version using nvm
       shell: bash -l {0} 
       run: nvm install
-    - run: npm ci
-    - run: npm run lint
-    - run: npm test
+    - name: Install
+      run: npm ci
+    - name: Lint
+      run: npm run lint
+    - name: Test
+      run: npm test
 
 
  - name: Set up node using nvm
