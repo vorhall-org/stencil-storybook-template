@@ -28,6 +28,10 @@ npm start
 
 This will run the stencil dev task and the storybook task in parallel and open storybook in your browser.
 
+!! Important !!
+
+The `start` script will launch 2 npm scripts in the background. So if you want to exit the `start` script, you need to exit the task twice.
+
 ### Start script verbosity
 
 The start script looks rather verbose. storybook imports the components bundle from the www directory. For the first run, we need to make sure that the www directory is present, otherwise storybook will throw an error that it could not import the bundle. This is why the start script is first doing a stencil build before kicking of a parallel task of running stencil and storybook.
