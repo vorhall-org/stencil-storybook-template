@@ -45,7 +45,7 @@
     "lint": "npm run lint:es && npm run lint:styles",
     "commitlint": "commitlint --edit",
     "generate": "node convenience/generate-component/index.js",
-    "prepare": "husky && npx playwright install && npx playwright install-deps"
+    "prepare": "husky && npx playwright install-deps"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",
