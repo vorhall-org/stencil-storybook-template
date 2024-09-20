@@ -4,4 +4,9 @@ updates:
   directory: "/"
   schedule:
     interval: "daily"
-    time: "16:30"
+    time: "17:00"
+  groups:
+    production-dependencies:
+      dependency-type: "production"
+    development-dependencies:
+      dependency-type: "development"
