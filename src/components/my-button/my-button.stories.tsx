@@ -21,7 +21,7 @@ type Story = StoryObj<customJSX.MyButton> & { args: customJSX.MyButton };
 /* ArgTypes & Args */
 /* ------------------------------------------------------ */
 
-const argTypes: ArgTypes = {
+const argTypes: Partial<ArgTypes<customJSX.MyButton>> = {
   variant: {
     control: {
       type: 'select',

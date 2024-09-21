@@ -19,7 +19,7 @@ type Story = StoryObj<customJSX.__nameUpperCase__> & { args: customJSX.__nameUpp
 /* ArgTypes & Args */
 /* ------------------------------------------------------ */
 
-const argTypes: ArgTypes = {};
+const argTypes: Partial<ArgTypes<customJSX.__nameUpperCase__>> = {};
 const defaultArgs: customJSX.__nameUpperCase__ = {
   foo: 'bar',
 };
