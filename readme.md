@@ -99,7 +99,6 @@ The project contains a custom boilerplate to bootsrap an new component. Use `npm
 ## Production build
 
 To create a production build, run
-
 ```
 npm run stencil:prod
 ```
